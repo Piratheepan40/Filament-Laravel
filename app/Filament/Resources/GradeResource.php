@@ -18,7 +18,7 @@ class GradeResource extends Resource
 {
     protected static ?string $model = Grade::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+protected static ?string $navigationIcon = 'heroicon-o-check-circle';
 
     public static function form(Form $form): Form
     {
@@ -75,7 +75,7 @@ class GradeResource extends Resource
             ->actions([
                 Tables\Actions\ViewAction::make()->label(''),
                 Tables\Actions\EditAction::make()->label(''),
-                Tables\Actions\EditAction::make()->label(''),
+                Tables\Actions\DeleteAction::make()->label(''),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

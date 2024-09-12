@@ -40,9 +40,8 @@ class SubjectsRelationManager extends RelationManager
             ->actions([
                 // Tables\Actions\EditAction::make(),
                 // Tables\Actions\DeleteAction::make(),
-                Tables\Actions\DetachAction::make()->form(fn (DetachAction $action):array=>[
-                    $action->getRecordSelect()->multiple(),
-                ]),
+                Tables\Actions\DetachAction::make(),
+                
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
